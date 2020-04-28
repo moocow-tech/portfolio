@@ -197,13 +197,14 @@ margin: 24px 0;
 .asp {width: 50%;} /* Dark Grey */
 .core {width: 50%;} /* Dark Grey */
 .boot {width: 80%;}
- /* Callout box - fixed position at the bottom of the page */
+ 
+/* Callout box - fixed position at the bottom of the page */
  .callout {
   position: fixed;
   bottom: 35px;
   right: 20px;
   margin-left: 20px;
-  max-width: 400px;
+  max-width: 35%;
 }
 
 /* Callout header */
@@ -245,7 +246,13 @@ margin: 24px 0;
 .closebtn:hover {
   color: lightgrey;
 
-} 
+}
+ @media screen and (max-width: 720px) {
+  .callout {
+    display: none;
+  }
+
+ }
 @media screen and (max-height: 450px) {
   .overlay a {font-size: 20px}
   .overlay .closebtn {

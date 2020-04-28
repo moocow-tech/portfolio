@@ -1,7 +1,10 @@
+const media_xs = window.matchMedia("(max-width: 768px)");
+const media_sm = window.matchMedia("(max-width: 991px)");
+const media_md = window.matchMedia("(max-width: 1199px)");
+
 const openNav = () => {
-let media = window.matchMedia("(max-width: 700px)")
-document.getElementById("myNav").style.width = (media.matches) ? "100%" : "60%";
-document.getElementById("res-w").style.marginLeft = (media.matches) ? "40px" : "150px" ;
+document.getElementById("myNav").style.width = (media_xs.matches) ? "100%" : (media_sm.matches) ? "75%" : "60%" ;
+document.getElementById("res-w").style.marginLeft = (media_xs.matches) ? "60px" : (media_sm.matches) ? "120px" : "100px" ;
 }
 
 const closeNav = () => {
