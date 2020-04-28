@@ -22,7 +22,7 @@ const closeContact = () => {
 
 const openSignIn = () => {
   document.getElementById("Collab").style.width = (media_xs.matches) ? "100%" : (media_sm.matches) ? "75%" : "50%" ;
-document.getElementById("frm-w").style.width = (media_xs.matches) ? "35vh" : (media_sm.matches) ? "30vh" : (media_md.matches) ? "25vh" :"20vh";
+document.getElementById("frm-w").style.width = (media_xs.matches) ? "35vh" : (media_sm.matches) ? "30vh" : (media_md.matches) ? "25vh" :"30vh";
 }
 
 const closeSignIn = () => {

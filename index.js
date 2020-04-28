@@ -1,9 +1,10 @@
 const http = require('http');
 const path = require('path');
 const fs = require('fs');
+const { parse } = require('querystring');
 
 const server = http.createServer((req, res) => {
-    
+
     //build file path
     let filePath = path.join(
         __dirname,
@@ -33,19 +34,18 @@ const server = http.createServer((req, res) => {
         case '.jpg':
             contentType = 'image/jpg';
             break;
-        case '.mp4' :
+        case '.mp4':
             contentType = 'video/mp4';
             break;
     }
 
     //read file
-
-    fs.readFile(filePath, (err,content)=> {
+    fs.readFile(filePath, (err, content) => {
         if (err) {
-            if(err.code == 'ENOENT'){
+            if (err.code == 'ENOENT') {
                 //Page Not Found
-                fs.readFile(path.join(__dirname, 'public', '404.html'), (err, content)=> {
-                    res.writeHead(200, {'Content-Type': 'text/html'});
+                fs.readFile(path.join(__dirname, 'public', '404.html'), (err, content) => {
+                    res.writeHead(200, { 'Content-Type': 'text/html' });
                     res.end(content, 'utf8');
                 })
             } else {
@@ -55,7 +55,7 @@ const server = http.createServer((req, res) => {
             }
         } else {
             //success
-            res.writeHead(200, {'Content-Type': contentType});
+            res.writeHead(200, { 'Content-Type': contentType });
             res.end(content, 'utf8');
         }
     });
@@ -63,3 +63,4 @@ const server = http.createServer((req, res) => {
 const PORT = process.env.PORT || 8080;
 
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+
