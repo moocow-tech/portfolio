@@ -12,11 +12,21 @@ const closeNav = () => {
 }
 
 const openContact = () => {
-  document.getElementById("Contact").style.width = "40%";
+  document.getElementById("Contact").style.width = (media_xs.matches) ? "100%" : (media_sm.matches) ? "75%" : "40%" ;
+  //document.getElementById("res-c").style.marginLeft = (media_xs.matches) ? "30%" : (media_sm.matches) ? "120px" : "100px" ;
 }
 
 const closeContact = () => {
   document.getElementById("Contact").style.width = "0%";
+}
+
+const openSignIn = () => {
+  document.getElementById("Collab").style.width = (media_xs.matches) ? "100%" : (media_sm.matches) ? "75%" : "50%" ;
+document.getElementById("frm-w").style.width = (media_xs.matches) ? "35vh" : (media_sm.matches) ? "30vh" : (media_md.matches) ? "25vh" :"20vh";
+}
+
+const closeSignIn = () => {
+  document.getElementById("Collab").style.width = "0%";
 }
 
 const dispNotes = () => {

@@ -125,11 +125,11 @@ width : 150px;
   position: relative;
   top: 10%;
   width: 100%;
-  margin-left : 150px;
 }
 
 .card {
-  margin-top : 40px;
+  display:block;
+  margin: 0 auto;
   max-width: 300px;
   text-align: center;
   font-family: arial;
@@ -198,6 +198,51 @@ margin: 24px 0;
 .core {width: 50%;} /* Dark Grey */
 .boot {width: 80%;}
  
+/*Collaboration Sigin in*/
+.overlay-collab {
+  position: relative;
+  top: 20%;
+  width: 100%;
+}
+
+.overlay-collab h1 {
+  color : #888;
+}
+
+.collab-log {
+  color: #888;
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+ text-align: center;
+  width: 15vw;
+}
+
+.collab-log input {
+  margin-bottom: 5vh;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  background-color:transparent;
+  outline: none;
+  color: white;
+  caret-color: #7e328d;
+  width: 100%;
+}
+
+.collab-log input[type=text]::placeholder {
+text-align:center;
+font-size: 18px;
+color: #7e328d;
+}
+
+.collab-log input[type=submit] {
+  background: #7e328d;
+  padding: 2vh;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px 4px;
+}
 /* Callout box - fixed position at the bottom of the page */
  .callout {
   position: fixed;

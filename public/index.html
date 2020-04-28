@@ -23,14 +23,14 @@
   <button id="myBtn" onclick="">About</button>
   <button id="myBtn" onclick="openNav()">Skills</button>
   <button id="myBtn" onclick="openContact()">Contact</button>
-  <div id="myCollab" onclick="">
+  <div id="myCollab" onclick="openSignIn()">
     <img src="img/bbcollab.png">
   </div>
 </div>
 <!--About me section-->
 <div id="Contact" class="overlay">
   <a href="javascript:void(0)" class="closebtn" onclick="closeContact()">&times;</a>
-  <div class="overlay-about">
+  <div id="res-c" class="overlay-about">
     <div class="card">
       <img src="img/moocowtechlogo.png" alt="moocow" style="width:100%">
       <h2>Joseph Fletcher</h2>
@@ -38,7 +38,6 @@
       <p>Bristol Community College</p>
       <div class="icons" style="margin: 24px 0;">
       <a href="#"><i class="fa fa-github"></i></a>
-      <a href="#"><i class="fa fa-twitter"></i></a>
       <a href="#"><i class="fa fa-linkedin"></i></a>
       <a href="#"><i class="fa fa-facebook"></i></a>
     </div>
@@ -131,6 +130,22 @@
   </div>
 </div>
 <!--End Skills Section-->
+
+<!--Sign In-->
+<div id="Collab" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeSignIn()">&times;</a>
+  <div class="overlay-collab">
+    <h1>Sign In</h1>
+   <form id="frm-w"class="collab-log" onSubmit=formSubmit(event)>
+      <input type="text" id="firstname" name="firstname" placeholder="First Name" onfocus="this.placeholder=''" onblur="this.placeholder='First Name'"><br>
+      <input type="text" id="lastname" name="lastname" placeholder="Last Name" onfocus="this.placeholder=''" onblur="this.placeholder='Last Name'"><br>
+      <input type="text" id="email" name="email" placeholder="BCC Email" onfocus="this.placeholder=''" onblur="this.placeholder='BCC Email'"><br>
+      <input type="text" id="course" name="course" placeholder="Course" onfocus="this.placeholder=''" onblur="this.placeholder='Course'">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+</div>
+<!--End Sign In-->
 
 <!--Callout Section-->
 <div class="callout">
